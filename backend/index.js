@@ -14,7 +14,7 @@ const port = process.env.PORT || 8000;
 // ✅ Setup CORS
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend
+    origin: "https://virtualassistant-oigr.onrender.com", // frontend
     credentials: true
   })
 );
