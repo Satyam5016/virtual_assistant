@@ -22,8 +22,8 @@ export const signUp = async (req, res) => {
     const token = genToken(user._id);   // ✅ no await needed
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false,   // set true in production (with HTTPS)
-      sameSite: "strict",
+      secure: true,   // set true in production (with HTTPS)
+      sameSite: "None",
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
 
